@@ -16,7 +16,7 @@ class App extends React.Component{
       showModal: false
      }
   }
-  displayModal=(beast, )=>{
+  displayModal=(beast)=>{
  this.setState({
   showModal:true,
   selectedBeast:beast,
@@ -25,14 +25,14 @@ class App extends React.Component{
   this.setState({
    showModal:false
   })  }
-
+  
     render() {
     return (
       <div key='appKey'>
         <Header />
         <Main data={this.state.dataBeast} displayModal={this.displayModal} />
         <SelectedBeast show={this.state.showModal} handleClose={this.handleClose} selectedBeast={this.state.selectedBeast}/> 
-        <Footer />
+         <Footer />
       </div>
       
     )
