@@ -1,9 +1,9 @@
 import React from "react";
 import Main from "./component/main";
-import Header from "./component/header"
+import Header from "./component/header";
 import Footer from "./component/footer";
-import data from "./component/data.json"
-
+import data from "./component/data.json";
+import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends React.Component {
   // constructor(props){
   //   super(props);
@@ -12,7 +12,7 @@ class App extends React.Component {
     return (
       <>
         <Header />
-        <Main item={data} />
+        <Main data={data} />
         <Footer />
       </>
     )
