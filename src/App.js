@@ -27,6 +27,7 @@ class App extends React.Component {
       showModal: false
     })
   }
+ 
 
   filterBeastByHornNumber = (e) => {
     const hornNumber = parseInt(e.target.value)
@@ -45,7 +46,25 @@ class App extends React.Component {
         <Main data={this.state.dataBeast} displayModal={this.displayModal} filterBeastByHornNumber={this.filterBeastByHornNumber} />
         <SelectedBeast show={this.state.showModal} handleClose={this.handleClose} selectedBeast={this.state.selectedBeast} />
         <Footer />
-      </div>
+ 
+  displayModal=(beast)=>{
+ this.setState({
+  showModal:true,
+  selectedBeast:beast,
+  })  }
+ handleClose=()=>{
+  this.setState({
+   showModal:false
+  })  }
+  
+    render() {
+    return (
+      <div key='appKey'>
+        <Header />
+        <Main data={this.state.dataBeast} displayModal={this.displayModal} />
+        <SelectedBeast show={this.state.showModal} handleClose={this.handleClose} selectedBeast={this.state.selectedBeast}/> 
+         <Footer />
+       </div>
 
     )
   }
