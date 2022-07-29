@@ -11,7 +11,7 @@ class HornedBeast extends React.Component {
     }
     handleCount = () => {
         this.setState({ clickCounter: this.state.clickCounter + 1 })
-         this.props.displayModal(this.props.dataBeast,this.clickCounter);
+         this.props.displayModal(this.props.dataBeast );
 
     }
     render() {
